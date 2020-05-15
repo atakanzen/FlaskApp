@@ -1,1 +1,1 @@
-web: python3 main.py
+web: python3 personal_web_flask/main.py
