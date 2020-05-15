@@ -1,0 +1,147 @@
+/* Main styles */
+body{
+    margin: 0px;
+    font-family: "Helvetica", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    ;
+}
+/* Navbar styles */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+    background-color: black;
+    color: #474747;
+    
+}
+.left-side {
+    display: flex;
+}
+.right-side {
+    font-weight: 600;
+}
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    
+}
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid #A4A2A2;
+}
+.nav-link-wrapper a:hover {
+    color: #A4A2A2;
+}
+/* Logo styles */
+.logo-img {
+    height: 88vh;
+    width: 100%;
+    background-position: center;  
+    
+}
+
+
+/* About page styles */
+
+.content-about {
+    background-color: black;
+    
+}
+.background-img {
+    background-image: url(static/images/2.jpg);
+    height: 88vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    
+
+
+}
+.about-header h2 {
+    color: #8a8a8a;
+    text-align: center;
+
+}
+.about-paragraph {
+    text-align: center;
+    top: 25px;
+    color: #8a8a8a;
+}
+.logos-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.logo-wrapper > img {
+    height: 50px;
+    width: 50px;
+    margin-right: 30px;
+}
+ /* Education Styles */
+
+ .education-content {
+     background-color: black;
+     height: 88vh;
+     width: auto;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+ .two-column-wrapper {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     justify-content: space-between;
+     padding: 50px;
+     color: #8a8a8a;
+ }
+ .left-content-wrapper {
+     align-self: center; 
+     margin-top: 120px;
+     width: 500px;
+
+}
+ .right-content-wrapper {
+    align-self: center;
+    margin-top: 120px;
+    padding-left: 200px;
+ }
+ /* Gallery Styles */
+ .gallery-items-wrapper {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+ }
+ .gallery-background-img {
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 100vh;
+     width: 100%;
+ }
+
+
+
+
+
+
+
+
+
+
+
+ 

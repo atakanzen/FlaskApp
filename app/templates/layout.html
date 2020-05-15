@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="{{ url_for('static', filename='css/main.css') }}">
+	<title>Atakan Zengin</title>
+</head>
+<body>
+ <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper ">
+                        <a href="{{url_for('home')}}">Home</a>
+                        </div>
+                        <div class="nav-link-wrapper">
+                        <a href="{{url_for('about')}}">About</a>
+                        </div>
+                        <div class="nav-link-wrapper">
+                            <a href="{{url_for('education')}}">Education</a>
+                        </div>
+                        <div class="nav-link-wrapper">
+                            <a href="{{url_for('gallery')}}">Gallery</a>
+                        </div>
+                        </div>
+                        <div class="right-side">
+                        <div class="brand">
+                        <div>ATAKAN ZENGİN</div>
+                    </div>
+                </div>
+            </div>
+              
+            </div>
+    
+{% block content %}
+{% endblock %}
+</body>
+</html>
