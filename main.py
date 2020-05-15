@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+import os
 
 app = Flask(__name__)
 
@@ -20,4 +21,4 @@ def gallery():
 	return render_template("gallery.html")
 
 if __name__ == "__main__":
-	app.run()
+	app.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
