@@ -65,7 +65,7 @@ body{
 .background-img {
     background-image: url(static/images/2.jpg);
     height: 88vh;
-    width: auto;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: bottom center;
     
