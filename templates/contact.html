@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="form">
+        <h2 class="title">Contact</h2>
+        <form method="POST" action="/">
+        <div class="form-field">{{ myform.name.label }} {{ myform.name }}</div>
+        <div class="form-field">{{ myform.email.label }} {{ myform.email }}</div>
+        <div  class="form-field message-field">{{ myform.message.label }} {{ myform.message }}</div>
+        {{ myform.submit }}
+        </form>
+    </div>
+    <script>
+        document.getElementById('submit').disabled = true;
+    </script>
+    {% endblock %}
+</body>
+</html>
