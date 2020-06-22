@@ -202,8 +202,11 @@ body{
     #message {
         width: 250px;
     }
-    #contact {
-        display: none;
+    .nav-wrapper > .left-side > div {
+        margin-right: 10px;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        
     }
  }
  @media only screen and (max-width: 800px) {
