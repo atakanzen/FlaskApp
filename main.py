@@ -9,7 +9,7 @@ app = Flask(__name__)
 csrf = CSRFProtect(app)
 app.config['SECRET_KEY'] = "secretkey"
 app.config['WTF_CSRF_SECRET_KEY'] = "secretkey"
-csrf.init_app(app)
+# csrf.init_app(app)
 
 
 

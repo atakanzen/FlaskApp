@@ -1,1 +1,1 @@
-web: python3 forms.py app: main.py
+web: python3 main.py
