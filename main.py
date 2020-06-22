@@ -33,7 +33,7 @@ def gallery():
 def contact():
 	myform = MyForm()
 	if myform.validate_on_submit():
-		return redirect(url_for(''))
+		return redirect(url_for('/'))
 	return render_template("contact.html", myform = myform)
 
 	
