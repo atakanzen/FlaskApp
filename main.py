@@ -1,8 +1,10 @@
 from flask import Flask
+from flask import request
 from flask import render_template
 from forms import MyForm
 from flask_wtf.csrf import CSRFProtect
-
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 import os
 
 app = Flask(__name__)
@@ -29,11 +31,25 @@ def education():
 def gallery():
 	return render_template("gallery.html")
 
-@app.route("/contact", methods=['GET','POST'])
+@app.route("/contact", methods=['POST','GET'])
 def contact():
 	myform = MyForm()
-	if myform.validate_on_submit():
-		return redirect(url_for('/'))
+	if request.method == 'POST':
+		if myform.validate_on_submit():
+			message = Mail(
+			from_email= myform.email.data,
+			to_emails='atakanzzengin@gmail.com',
+			subject=myform.name.data + 'wants to contact Atakan',
+			plain_text_content=myform.message.data)
+			try:
+				sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+				response = sg.send(message)
+				# print(response.status_code)
+				# print(response.body)
+				# print(response.headers)
+			except Exception as e:
+				print(e)
+				# print(e.message)
 	return render_template("contact.html", myform = myform)
 
 	

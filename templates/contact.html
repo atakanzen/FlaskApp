@@ -10,7 +10,8 @@
     {% block content %}
     <div class="form">
         <h2 class="title">Contact</h2>
-        <form method="POST" action="/">
+        <form method="POST" action="{{ url_for('contact') }}">
+        {{ myform.csrf_token }}
         <div class="form-field">{{ myform.name.label }} {{ myform.name }}</div>
         <div class="form-field">{{ myform.email.label }} {{ myform.email }}</div>
         <div  class="form-field message-field">{{ myform.message.label }} {{ myform.message }}</div>
@@ -18,7 +19,7 @@
         </form>
     </div>
     <script>
-        document.getElementById('submit').disabled = true;
+        // document.getElementById('submit').disabled = true;
     </script>
     {% endblock %}
 </body>
